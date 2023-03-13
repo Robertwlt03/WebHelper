@@ -1,0 +1,24 @@
+:root {
+  --primary-color: rgb(43, 43, 43);
+  --secondary-color: rgb(112, 112, 112);
+  --container-color: radial-gradient(rgb(92, 92, 92), rgb(43, 43, 43));
+  --text-color: white;
+}
+
+.white-mode {
+  --primary-color: rgb(43, 43, 43);
+  --secondary-color: rgb(221, 220, 220);
+  --container-color: radial-gradient(rgb(236, 236, 236), rgb(201, 201, 201));
+  --text-color: black;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+body {
+  background: var(--secondary-color);
+  height: 100%;
+}

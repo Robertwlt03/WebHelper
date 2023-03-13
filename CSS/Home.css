@@ -7,7 +7,7 @@
 
 .white-mode {
   --primary-color: rgb(43, 43, 43);
-  --secondary-color: rgb(243, 243, 243);
+  --secondary-color: rgb(221, 220, 220);
   --container-color: radial-gradient(rgb(236, 236, 236), rgb(201, 201, 201));
   --text-color: black;
 }
@@ -23,84 +23,87 @@ body {
   height: 100%;
 }
 
-/** -------------------------------------------------------- Navbar Start -------------------------------------------------------- */
-.navbar {
-  background-color: var(--primary-color);
-  width: 100vw;
-  color: white;
-  display: flex;
-  align-items: center;
-  position: relative;
-  position: fixed;
-}
-/*? ------------------------------------------ Logo ------------------------------------------ */
-.break-line {
-  font-size: 1.6rem;
-}
-
-.navbar-content {
-  display: flex;
-  align-items: center;
-}
-
-.navbar-content a {
-  display: flex;
-  align-items: center;
-  padding: 0 20px 0 20px;
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  transition: 0.1s ease-in-out;
-}
-
-.navbar-content a:hover {
-  color: #79dbff;
-  transition: 0.1s ease-in-out;
-}
-
-.logo {
-  margin: 10px 0;
-}
-
-/*? ------------------------------------------ Darkmode ------------------------------------------ */
-.settings {
-  display: flex;
-  position: absolute;
-  right: 0;
-  list-style-type: none;
-  padding-right: 20px;
-}
-
-#dark_mode_btn {
-  background: none;
-  color: white;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  padding: 5px;
-  border-radius: 5px;
-  transition: 0.15s ease-in-out;
-}
-
-#dark_mode_btn:hover {
-  background: rgba(128, 128, 128, 0.432);
-  padding: 5px;
-  border-radius: 5px;
-  transition: 0.1s ease-in-out;
-}
-/** -------------------------------------------------------- Navbar Ende -------------------------------------------------------- */
-main {
+/** -------------------------------------------------------- News -------------------------------------------------------- */
+.news {
   padding: 100px 60px 0 60px;
+}
+
+.img-container {
+  position: relative;
+}
+
+.img-container img {
+  width: 100%;
+  height: 25vh;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.desc {
+  color: white;
+  padding: 5px 10px 5px 30px;
+  position: absolute;
+  bottom: 30px;
+  background: rgba(112, 112, 112, 0.623);
+  border-radius: 0 5px 5px 0;
+}
+
+.desc h4 {
+  font-size: 1.3rem;
+}
+
+/** -------------------------------------------------------- Main -------------------------------------------------------- */
+main {
+  padding: 120px 60px 0 60px;
+}
+
+.container-row-name {
+  color: var(--text-color);
+  margin-bottom: 25px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.container-row-name i {
+  font-size: 2rem;
+}
+
+.container-row {
+  display: flex;
+  gap: 70px;
+  width: 100%;
+  justify-content: start;
+}
+
+.background {
+  background: rgba(0, 0, 0, 0.123);
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 120px;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+}
+
+.container-row a {
+  text-decoration: none;
 }
 
 .container {
   background: var(--container-color);
   padding: 5px;
-  width: fit-content;
+  width: 300px;
   color: var(--text-color);
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
     rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transition: 0.3s ease-in-out;
+}
+
+.container:hover {
+  transform: scale(120%);
+  transition: 0.3s ease-in-out;
 }
 
 .container img {
@@ -109,18 +112,11 @@ main {
   object-fit: cover;
   border-radius: 5px;
 }
-
 .container p {
   padding: 10px 5px 5px 5px;
 }
 
-.container-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 70px;
-}
 /** ------------------------------------------ CSS Extra Class ------------------------------------------ */
 .shadow {
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.137);
+  text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.151);
 }
