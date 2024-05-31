@@ -1,4 +1,178 @@
-.d-center {
-    display: flex;
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@800&display=swap');
+
+:root {
+    --primary: #333743;
+    --secondary: #2a2d37;
+    --blue: #239ad0;
+    --white: #ffffff;
 }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+html {
+    background: var(--primary);
+}
+a{
+    transition: 0.2s;
+    text-decoration: none;
+    color: var(--white);
+}
+a:hover{
+    color: rgba(255, 255, 255, 0.56);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ================= Navbar Section ================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 200px;
+    color: var(--white);
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-img {
+height: 20px;
+}
+.logo-text {
+    font-weight: bolder;
+}
+.logo-sub {
+    color: var(--blue);
+    border: 1px solid var(--blue);
+    border-radius: 4px;
+    margin-left: 5px;
+    padding: 0 3px;
+}
+
+.links {
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 10px 25px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 15px;
+
+}
+
+.action-btn-wrapper {
+    justify-self: end;
+    background: rgba(255,255,255,.02);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    backdrop-filter: blur(8px)
+}
+.action-btn-wrapper button {
+    transition: 0.2s;
+    padding: 5px 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+}
+.action-btn-wrapper .login {
+    background: none;
+    color: var(--white);
+}
+.action-btn-wrapper .login:hover {
+    color: #c7c7c7;
+    transition: 0.2s;
+}
+.action-btn-wrapper .register {
+    background: none;
+    border: 1px solid var(--blue);
+    box-shadow: inset 0 -24px 46px -15px rgb(20, 86, 115);
+    color: var(--white);
+}
+.action-btn-wrapper .register:hover {
+    box-shadow: inset 0 0 30px -14px rgb(34, 148, 201), inset 0 -24px 46px -15px rgb(34, 148, 201);
+    transition: 0.2s;
+}
+.action-btn-wrapper .register .fa-chevron-right {
+    padding-left: 10px;
+}
+
+/* ================= Hero Section ================= */
+.hero-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 500px;
+    mask-image: linear-gradient(to bottom, black 60%,transparent 100%);
+}
+.hero-bg{
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: -1;
+}
+.hero {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 200px;
+    height: 500px;
+    color: var(--white);
+}
+.hero-left {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+}
+.hero-text {
+    margin-bottom: 20px;
+}
+.hero-text h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+.hero-text p {
+    color: rgba(255, 255, 255, 0.8);
+}
+.hero .register {
+    background: none;
+    backdrop-filter: blur(8px);
+    color: var(--white);
+    border: 1px solid var(--blue);
+    box-shadow: inset 0 -24px 46px -15px rgb(20, 86, 115);
+    padding: 5px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.hero .register:hover {
+    box-shadow: inset 0 0 30px -14px rgb(34, 148, 201), inset 0 -24px 46px -15px rgb(34, 148, 201);
+    transition: 0.2s;
+}
+.hero .register > .fa-chevron-right {
+    padding-left: 10px;
+}
+
+.hero-right {
+    grid-column: 2;
+    grid-row: 1;
+    position: relative;
+}
+
